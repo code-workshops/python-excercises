@@ -1,4 +1,4 @@
-tesla_speed = 100
+tesla_speed = 90
 corvette_speed = 100
 
 # Complete the comparisons
