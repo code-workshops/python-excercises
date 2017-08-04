@@ -18,14 +18,14 @@ while GAME_ON:
     choice = input("Pick a number (1-25): ")
 
     # Complete the comparisons
-    # Replace YOUR_CONDITION_HERE/YOUR_COMPARISON_HERE with an equality
+    # Replace YOUR_CONDITION_HERE with an equality
     if YOUR_CONDITION_HERE:
         print "Too many tries! The answer is: ", answer
         GAME_ON = False
-    elif YOUR_COMPARISON_HERE:
+    elif YOUR_CONDITION_HERE:
         print "Too high!"
         tries += 1
-    elif YOUR_COMPARISON_HERE:
+    elif YOUR_CONDITION_HERE:
         # YOUR_CODE_HERE - make a print statement that tells the player 'Too low!'
         # YOUR_CODE_HERE - increment the tries counter
     else:
