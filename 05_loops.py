@@ -1,6 +1,11 @@
 """
 Guessing Game 2.0
 
+Uncomment the lines of code so that:
+    - The game gives the player 3 tries
+    - The game quits when the player gets the right answer.
+    - Complete the code described in the comments below
+    
 We can give players options using conditionals and comparisons. For example, we might want the player to see certain things
 when they turn left or give them a reward if they reach a certain score.
 """
@@ -13,7 +18,7 @@ answer = random.randrange(1, 26)
 # tries = 1
 # GAME_ON = True
 
-while GAME_ON:
+# while GAME_ON:
     # Let the player type an answer
     choice = input("Pick a number (1-25): ")
 
@@ -30,4 +35,4 @@ while GAME_ON:
         # YOUR_CODE_HERE - increment the tries counter
     else:
         print "CORRECT! YOU WIN!"
-        break
+        # YOUR_CODE_HERE - exit the game by setting GAME_ON to False
