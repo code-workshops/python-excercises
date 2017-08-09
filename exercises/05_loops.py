@@ -10,7 +10,7 @@ import random
 answer = random.randrange(1, 26)
 
 # Count the number of times the player gets it wrong
-tries = 1
+tries = 0
 GAME_ON = True
 
 while GAME_ON:
@@ -18,17 +18,19 @@ while GAME_ON:
     choice = input("Pick a number (1-25): ")
 
     # Complete the comparisons
-    # Replace YOUR_COMPARISON_HERE with an equality
-    if tries >= 3:
-        print "Too many tries! The answer is: ", answer
-        GAME_ON = False
-    elif YOUR_COMPARISON_HERE:
+    # Replace YOUR_CONDITION_HERE with an equality
+    if YOUR_ CONDITION_HERE:
         print "Too high!"
         tries += 1
-    elif YOUR_COMPARISON_HERE:
+    elif YOUR_CONDITION_HERE:
         print "Too low!"
         # Increment the number of tries below
-        tries += 1
+        YOU_FORGOT_TO_INCREMENT_TRIES
     else:
         print "CORRECT! YOU WIN!"
         break
+
+    # After the player has played, check that they haven't tried more than 3 times!
+    if YOUR_CONDITION_HERE:
+        print "Too many tries! The answer is: ", answer
+        GAME_ON = False
