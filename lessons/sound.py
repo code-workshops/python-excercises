@@ -2,11 +2,19 @@
 Source: http://www.nerdparadise.com/programming/pygame/part3
 """
 import pygame
+import time
 
-pygame.mixer.music.load('foo.mp3')
-pygame.mixer.music.play()
-pygame.mixer.music.queue('new_song.mp3')
+pygame.mixer.init()
+
+pygame.mixer.music.load('media/marbles.mp3')
+pygame.mixer.music.play(0)
+time.sleep(5)
 pygame.mixer.music.stop()
 
-effect = pygame.mixer.Sound('beep.wav')
-effect.play()
+try:
+    effect = pygame.mixer.Sound('media/bye.wav')
+except MemoryError as e:
+    raise
+else:
+    effect.play()
+    time.sleep(2)

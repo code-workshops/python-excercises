@@ -33,6 +33,8 @@ y = 30
 clock = pygame.time.Clock()
 
 
+print "Game starting ..."
+
 # Main game loop
 while not done:
     #####################################################

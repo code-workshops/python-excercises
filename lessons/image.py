@@ -4,8 +4,6 @@ Source: http://www.nerdparadise.com/programming/pygame/part2
 import pygame
 import os
 
-print "Script start ..."
-
 _image_library = {}
 
 
@@ -33,19 +31,23 @@ pygame.init()
 
 # Create a screen that's 400px x 300px
 screen = pygame.display.set_mode((400, 300))
-done = False
+GAME_ON = True
 clock = pygame.time.Clock()
 
-while not done:
+while GAME_ON:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            done = True
+            GAME_ON = False
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                GAME_ON = False
 
     # Color screen background white
     screen.fill((255, 255, 255))
 
-    # Our image -- Look in the left panel and check the images folder for it
-    screen.blit(get_image('images/ball.png'), (20, 20))
+    # Our image -- Look in the left panel and check the images folder to find it
+    # This is called the 'path' to the image. It names the folder its in and its name.
+    screen.blit(get_image('media/orb.png'), (20, 20))
 
     pygame.display.flip()
     clock.tick(60)

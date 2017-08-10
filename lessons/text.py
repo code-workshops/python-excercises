@@ -28,7 +28,8 @@ def get_font(font_preferences, size):
     # Create a name for font so we can save it and use it later
     key = str(font_preferences) + '|' + str(size)
     font = _cached_fonts.get(key, None)
-    if font == None:
+    # This means: 'if there is no font then create one'
+    if not font:
         font = make_font(font_preferences, size)
         _cached_fonts[key] = font
     return font
@@ -41,7 +42,8 @@ def create_text(text, fonts, size, color):
     # TODO: This can't be right. Test the key names here and in get_font()
     key = '|'.join(map(str, (fonts, size, color, text)))
     image = _cached_text.get(key, None)
-    if image == None:
+    # Condition: 'if there is no image, create a new one'
+    if not image:
         font = get_font(fonts, size)
         image = font.render(text, True, color)
         _cached_text[key] = image
