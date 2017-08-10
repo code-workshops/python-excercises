@@ -6,12 +6,6 @@ def greet(name):
     """Given a name, return the greeting 'Nice to meet you, <name>'."""
     # Your code here
     
-def exists(val):
-    """
-    Check the database to see if val is already stored there.
-    """
-    # Your code here
-
 def convert_to_celcius(temp):
     """
     CHALLENGE!
@@ -44,11 +38,6 @@ def run_tests():
     test(greet(007), 'Nice to meet you, 007!')
     print("\n\n")
       
-    print("Testing exists() ...")
-    test(exists('King'), True)
-    test(exists('Queen'), False)
-    print("\n\n")
-    
     print("Testing convert_to_celcius()...")
     test(convert_to_celcius(73), 23)
     test(convert_to_celcius(57), 14)
